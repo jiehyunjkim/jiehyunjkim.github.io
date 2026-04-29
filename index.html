@@ -1,1 +1,316 @@
-Hello World
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jenna Kim</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: white;
+      color: black;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* NAV */
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 30px;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .nav a:hover {
+      color: #f26ca7;
+    }
+
+    /* NAME */
+    .name {
+      font-size: 42px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      font-size: 24px;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      color: #f26ca7; /* 핑크 */
+      font-weight: 600;
+    }
+
+    /* ABOUT */
+    .about {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .about img {
+      width: 220px;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .links {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .links a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .links a:hover {
+      color: #f26ca7;
+    }
+
+    /* PUBLICATION */
+    .pub {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .pub img {
+      width: 140px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .pub-text {
+      flex: 1;
+    }
+
+    .pub-title {
+      font-weight: 600;
+    }
+
+    .pub-links a {
+      font-size: 14px;
+      margin-right: 10px;
+      text-decoration: none;
+      color: #f26ca7;
+    }
+
+    /* EXPERIENCE */
+    .exp-item {
+      margin-bottom: 15px;
+    }
+
+    /* CONTACT */
+    .contact {
+      margin-top: 20px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: 100%;
+      }
+
+      .about {
+        flex-direction: column;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- NAV -->
+<!--   <div class="nav">
+    <a href="#">HOME</a>
+    <a href="#gallery">GALLERY</a>
+  </div> -->
+
+  <!-- NAME -->
+  <div class="name">Jenna Kim</div>
+
+  <!-- ABOUT -->
+  <div class="about">
+    <img src="image/profile.jpg" alt="profile">
+
+    <div class="about-text">
+      <p>
+        I am a Ph.D. candidate in Computer Science at the University of Massachusetts Boston, advised by Prof. Daniel Haehn. I previously studied Marketing and Business Analytics, bringing a data-driven perspective to my research.
+      </p>
+
+      <p>
+        I develop deep learning methods for medical image segmentation, with a focus on clinically interpretable AI for cardiovascular imaging. My work bridges methodological advances with real world biomedical applications.
+      </p>
+
+      <p>
+        I have collaborated with researchers at the University of Pennsylvania and worked as an AI developer at myotwin.
+      </p>
+
+      <div class="links">
+        <a href="mailto:JieHyun.Kim001@umb.edu">Email</a>
+        <a href="https://scholar.google.com/citations?user=CYRYUYoAAAAJ&hl=en">Google Scholar</a>
+        <a href="https://github.com/jiehyunjkim">GitHub</a>
+        <a href="https://www.linkedin.com/in/jenna-j-kim/">LinkedIn</a>
+        <a href="image/cv.pdf" target="_blank">CV</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <div class="section-title">Selected Publications</div>
+
+  <div class="pub">
+    <img src="image/cactas_uq.png">
+    <div class="pub-text">
+      <div class="pub-title">Uncertainty Quantification from Calcified Plaque to Outer Wall Estimation in CTA</div>
+      <div>MIDL 2026 (under review)</div>
+      <div class="pub-links">
+        <a href="image/MIDL2026.pdf">paper</a>
+        <a href="image/cactas_uq_poster.svg">visual summary</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img src="image/cardiac.png">
+    <div class="pub-text">
+      <div class="pub-title">Automatic Calcified Plaque Segmentation in Carotid Arteries with Uncertainty Quantification</div>
+      <div>MICCAI 2026 (under review)</div>
+      <div class="pub-links">
+        <a href="image/MICCAI2026.pdf">paper</a>
+        <a href="image/cardiac_poster.svg">visual summary</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img src="image/neuro.png">
+    <div class="pub-text">
+      <div class="pub-title">Explainable Machine‐Learning Model to Classify Culprit Calcified Carotid Plaque in Embolic Stroke of Undetermined Source</div>
+      <div>Journal of Neuroimaging</div>
+      <div class="pub-links">
+        <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jon.70119">paper</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img src="image/cactas_ai.png">
+    <div class="pub-text">
+      <div class="pub-title">Automatic Segmentation of Calcified Plaque in Carotid Arteries</div>
+      <div>ISBI 2025</div>
+      <div class="pub-links">
+          <a href="https://ieeexplore.ieee.org/abstract/document/10981168">paper</a>
+        <a href="image/cactas_ai_poster.svg">visual summary</a>
+        <a href="image/isbi_poster.svg">poster</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img src="image/stroke.png">
+    <div class="pub-text">
+      <div class="pub-title">Machine-learning Approach To Classify Vulnerable Calcified Plaque In Embolic Stroke Of Undetermined Source</div>
+      <div>Stroke</div>
+        <a href="https://www.ahajournals.org/doi/abs/10.1161/str.56.suppl_1.WMP65">paper</a>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img src="image/cactas_tool.png">
+    <div class="pub-text">
+      <div class="pub-title">Streamlined Carotid Artery Calcification Labeling For CTA Scans</div>
+      <div>SCCT 2023</div>
+        <a href="https://www.journalofcardiovascularct.com/article/S1934-5925(23)00259-9/fulltext">paper</a>
+        <a href="image/cactas_tool_poster.svg">visual summary</a>
+        <a href="image/scct_poster.svg">poster</a>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section-title">Experience</div>
+
+  <div class="exp-item">
+    <details>
+      <summary>Summer 2025 · AI Developer, myotwin · Göttingen, Germany</summary>
+
+      <ul>
+        <li>Built a preprocessing pipeline for cardiac organoid image analysis, processing datasets of over 6,000 frames using UNet-based ROI segmentation.</li>
+        <li>Optimized motion tracking using Lucas-Kanade optical flow, reducing processing time from hours to under 1 minute for contraction-phase analysis.</li>
+        <li>Developed an end-to-end workflow integrating segmentation, signal processing, motion tracking, and velocity calculation.</li>
+        <li>Implemented ZenML for pipeline orchestration to support scalable analysis and future automation.</li>
+      </ul>
+
+    </details>
+  </div>
+
+
+  <div class="exp-item">
+    <details>
+      <summary>2020–2026 · Research Assistant · Boston, MA, USA</summary>
+
+      <ul>
+        <li>Significantly contributed to securing a $20,000 internal grant for <i>Automatic Plaque Segmentation in Carotid Arteries with Uncertainty Quantification</i> (July 2025 – December 2026).</li>
+      </ul>
+
+    </details>
+  </div>
+
+
+  <!-- GALLERY -->
+<!--   <div id="gallery" class="section-title">Gallery</div>
+
+  <div class="gallery">
+    <img src="image/gallery1.jpg">
+    <img src="image/gallery2.jpg">
+    <img src="image/gallery3.jpg">
+    <img src="image/gallery4.jpg">
+  </div>
+ -->
+</div>
+
+<footer style="text-align:center; margin-top:60px; font-size:14px; color:gray;">
+  © 2026 Jenna Kim. All rights reserved.
+</footer>
+
+</body>
+</html>

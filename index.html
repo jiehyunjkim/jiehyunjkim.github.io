@@ -318,7 +318,13 @@
 
 <footer style="text-align:center; margin-top:40px; color:gray;">
 
-  <img src="image/duck.png" width="40" style="display:block; margin:0 auto 4px auto;">
+  <a href="#" onclick="toggleDuck(event)">
+    <img src="image/duck.png" width="40"
+         style="display:block; margin:0 auto 4px auto; cursor:pointer;">
+  </a>
+
+  <img id="duck-full" src="image/Jenna_duck.png"
+       style="display:none; width:200px; margin:10px auto;">
 
   <div style="font-size:10px; color:#bbb; margin-bottom:6px;">
     Icon by Flaticon
@@ -329,6 +335,14 @@
   </div>
 
 </footer>
+
+<script>
+function toggleDuck(e) {
+  e.preventDefault();
+  const img = document.getElementById("duck-full");
+  img.style.display = (img.style.display === "none") ? "block" : "none";
+}
+</script>
 
 </body>
 </html>

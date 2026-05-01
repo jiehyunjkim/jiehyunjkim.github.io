@@ -370,8 +370,14 @@ function toggleDuck(e) {
     let left = rect.right + 10;
     let top = rect.top + window.scrollY;
 
+    // 👉 오른쪽 넘어가면 왼쪽으로
     if (left + 220 > window.innerWidth) {
       left = rect.left - 220;
+    }
+
+    // 👉 그래도 왼쪽 밖이면 최소값 보정
+    if (left < 10) {
+      left = 10;
     }
 
     modal.style.left = left + "px";
@@ -379,7 +385,6 @@ function toggleDuck(e) {
   }
 }
 
-// close picture
 document.addEventListener("click", function(e) {
   const modal = document.getElementById("duck-modal");
 

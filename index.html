@@ -143,10 +143,8 @@
       display: none;
       position: absolute;
 
-      /* 👉 오리 기준 위치 */
-      bottom: 80px;
-      left: 50%;
-      transform: translateX(60px);  /* 👉 오른쪽으로 이동 */
+      top: -200px;   /* 👉 오리 바로 위 */
+      left: 50px;    /* 👉 오리 오른쪽 */
 
       background: white;
       padding: 10px;
@@ -336,15 +334,23 @@
   © 2026 Jenna Kim. All rights reserved.
 </footer> -->
 
-<footer style="text-align:center; margin-top:40px; color:gray; position:relative;">
+<footer style="text-align:center; margin-top:40px; color:gray;">
 
-  <!-- 🐤 duck button -->
-  <a href="#" class="duck-trigger" onclick="toggleDuck(event)" style="position:relative; display:inline-block;">
-    <img src="image/duck.png" width="40"
-         style="display:block; margin:0 auto 4px auto; cursor:pointer;">
-  </a>
+  <div style="display:inline-block; position:relative;">
 
-  <div style="font-size:10px; color:#bbb; margin-bottom:6px;">
+    <!-- 🐤 duck -->
+    <a href="#" class="duck-trigger" onclick="toggleDuck(event)">
+      <img src="image/duck.png" width="40" style="cursor:pointer;">
+    </a>
+
+    <!-- 🐤 popup (👉 여기 안에 넣어야 함) -->
+    <div id="duck-modal">
+      <img src="image/Jenna_duck.png">
+    </div>
+
+  </div>
+
+  <div style="font-size:10px; color:#bbb; margin-top:6px;">
     Icon by Flaticon
   </div>
 

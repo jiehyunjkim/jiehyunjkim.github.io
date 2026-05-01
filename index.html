@@ -139,6 +139,24 @@
       border-radius: 8px;
     }
 
+    #duck-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    #duck-modal img {
+      max-width: 300px;
+      border-radius: 10px;
+    }
+
     @media (max-width: 768px) {
       .container {
         width: 100%;
@@ -150,23 +168,6 @@
 
       .gallery {
         grid-template-columns: 1fr;
-      }
-      #duck-modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.5);
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
-      }
-
-      #duck-modal img {
-        max-width: 300px;
-        border-radius: 10px;
       }
     }
   </style>

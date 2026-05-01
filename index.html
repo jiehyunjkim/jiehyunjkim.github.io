@@ -141,7 +141,7 @@
 
     #duck-modal {
       display: none;
-      position: absolute;
+      position: fixed;
       background: white;
       padding: 10px;
       border-radius: 10px;
@@ -365,7 +365,7 @@ function toggleDuck(e) {
   } else {
     modal.style.display = "block";
 
-    const rect = e.target.getBoundingClientRect();
+    const rect = e.currentTarget.getBoundingClientRect();
 
     let left = rect.right + 10;
     let top = rect.top;
